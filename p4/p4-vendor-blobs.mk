@@ -17,10 +17,6 @@
 # Prebuilt libraries that are needed to build open-source libraries
 
 PRODUCT_COPY_FILES := \
-    vendor/samsung/p4/proprietary/lib/libaudio.so:obj/lib/libaudio.so \
-    vendor/samsung/p4/proprietary/lib/libaudiopolicy.so:obj/lib/libaudiopolicy.so \
- 
-PRODUCT_COPY_FILES := \
     vendor/samsung/p4/proprietary/bin/gpsd:system/bin/gpsd \
     vendor/samsung/p4/proprietary/bin/gps.cer:system/bin/gps.cer \
     vendor/samsung/p4/proprietary/bin/macloader:system/bin/macloader \
@@ -57,17 +53,17 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4/proprietary/lib/egl/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
     vendor/samsung/p4/proprietary/lib/egl/libGLESv1_CM_tegra.so:system/lib/egl/libGLESv1_CM_tegra.so \
     vendor/samsung/p4/proprietary/lib/egl/libGLESv2_tegra.so:system/lib/egl/libGLESv2_tegra.so \
+    vendor/samsung/p4/proprietary/lib/hw/audio_policy.tegra.so:system/lib/hw/audio_policy.tegra.so \
+    vendor/samsung/p4/proprietary/lib/hw/audio.primary.tegra.so:system/lib/hw/audio.primary.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/camera.tegra.so:system/lib/hw/camera.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/gps.tegra.so:system/lib/hw/gps.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/gralloc.tegra.so:system/lib/hw/gralloc.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/hwcomposer.tegra.so:system/lib/hw/hwcomposer.tegra.so \
     vendor/samsung/p4/proprietary/lib/hw/lights.p3.so:system/lib/hw/lights.p3.so \
     vendor/samsung/p4/proprietary/lib/hw/sensors.p3.so:system/lib/hw/sensors.p3.so \
-    vendor/samsung/p4/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
+    vendor/samsung/p4/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
     vendor/samsung/p4/proprietary/lib/libakm.so:system/lib/libakm.so \
     vendor/samsung/p4/proprietary/lib/libardrv_dynamic.so:system/lib/libardrv_dynamic.so \
-    vendor/samsung/p4/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so \
-    vendor/samsung/p4/proprietary/lib/libaudio.so:system/lib/libaudio.so \
     vendor/samsung/p4/proprietary/lib/libcgdrv.so:system/lib/libcgdrv.so \
     vendor/samsung/p4/proprietary/lib/liblvvefs.so:system/lib/liblvvefs.so \
     vendor/samsung/p4/proprietary/lib/libmllite.so:system/lib/libmllite.so \
@@ -120,12 +116,27 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4/proprietary/lib/libnvtvmr.so:system/lib/libnvtvmr.so \
     vendor/samsung/p4/proprietary/lib/libnvwinsys.so:system/lib/libnvwinsys.so \
     vendor/samsung/p4/proprietary/lib/libnvwsi.so:system/lib/libnvwsi.so \
-    vendor/samsung/p4/proprietary/lib/libsamsungAcousticeq.so:system/lib/libsamsungAcousticeq.so \
-    vendor/samsung/p4/proprietary/lib/lib_Samsung_Acoustic_Module_Llite.so:system/lib/lib_Samsung_Acoustic_Module_Llite.so \
-    vendor/samsung/p4/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
-    vendor/samsung/p4/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
-    vendor/samsung/p4/proprietary/lib/lib_Samsung_Sound_Booster.so:system/lib/lib_Samsung_Sound_Booster.so \
     vendor/samsung/p4/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
     vendor/samsung/p4/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so \
     vendor/samsung/p4/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
-    vendor/samsung/p4/proprietary/lib/omxplayer.so:system/lib/omxplayer.so
+    vendor/samsung/p4/proprietary/lib/libwvm.so:system/lib/libwvm.so \
+    vendor/samsung/p4/proprietary/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so \
+    vendor/samsung/p4/proprietary/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
+    vendor/samsung/p4/proprietary/lib/omxplayer.so:system/lib/omxplayer.so \
+    vendor/samsung/p4/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+    vendor/samsung/p4/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
