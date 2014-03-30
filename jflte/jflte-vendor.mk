@@ -18,5 +18,3 @@
 PRODUCT_PACKAGES += libtime_genoff
 
 $(call inherit-product, vendor/samsung/jflte/jflte-vendor-blobs.mk)
-$(call inherit-product, vendor/gapps/gapps-vendor-blobs.mk)
-
